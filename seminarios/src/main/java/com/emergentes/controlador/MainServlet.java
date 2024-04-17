@@ -57,7 +57,7 @@ public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        String[] seminarioSelect = request.getParameterValues("seminarios");
+        String[ ] seminarioSelect = request.getParameterValues("seminarios");
         
         HttpSession ses = request.getSession();
         ArrayList<Estudiante> lista = (ArrayList<Estudiante>) ses.getAttribute("listest");
@@ -69,8 +69,8 @@ public class MainServlet extends HttpServlet {
         objest.setTurno(request.getParameter("turno"));
         if (seminarioSelect != null) {
             objest.setSeminarios(new ArrayList<>(Arrays.asList(seminarioSelect)));
-        } 
-      
+        }
+      System.out.println("valor: "+Arrays.toString(seminarioSelect));
         
         if (id == 0) {
             int idNew = obtenerId(request);

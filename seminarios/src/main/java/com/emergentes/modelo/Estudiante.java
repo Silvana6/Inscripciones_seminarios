@@ -9,7 +9,7 @@ public class Estudiante {
     private String nombres;
     private String apellidos;
     private String turno;
-    private List<String> seminarios;
+    private ArrayList<String> seminarios;
 
     public Estudiante() {
         this.id = 0;
@@ -24,48 +24,50 @@ public class Estudiante {
         return id;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
-
-    public String getNombres() {
-        return nombres;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public String getTurno() {
-        return turno;
-    }
-
-    public List<String> getSeminarios() {
-        return seminarios;
-    }
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getFecha() {
+        return fecha;
     }
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
+    public String getNombres() {
+        return nombres;
+    }
+
     public void setNombres(String nombres) {
         this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
     }
 
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
 
+    public String getTurno() {
+        return turno;
+    }
+
     public void setTurno(String turno) {
         this.turno = turno;
     }
 
-    public void setSeminarios(List<String> seminarios) {
+    public ArrayList<String> getSeminarios() {
+        return seminarios;
+    }
+
+    public void setSeminarios(ArrayList<String> seminarios) {
         this.seminarios = seminarios;
     }
+
+
 
 }
